@@ -4,9 +4,6 @@
 ## Overview
 CORE programming language Interpreter, consisting of a Scanner, Parser, and Executor
 
-Definition of a Software Interpreter:
-> A program whose job at run-time is to manage a process governed by an input program, ushering that process through its states at run-time.
-
 The interpreter consists of the following components:
 - **Scanner:** Inputs Core program, produces stream of *tokens*.
 - **Parser:** Consumes stream of tokens, produces the *abstract parse tree* (PT).
@@ -21,6 +18,7 @@ The Parser and Executor are written using a recursive descent (syntax-directed) 
 ### Grammar for CORE
 The context-free grammar for CORE, defined in BNF (Backus–Naur Form):
 
+```
 <prog> ::= program { <decl-seq> begin { <stmt-seq> } } | program { begin { <stmt-seq> } }
 <decl-seq> ::= <decl> | <decl><decl-seq>
 <stmt-seq> ::= <stmt> | <stmt><stmt-seq>
@@ -38,6 +36,7 @@ The context-free grammar for CORE, defined in BNF (Backus–Naur Form):
 <expr> ::= <term> | <term> + <expr> | <term> – <expr>
 <term> ::= <factor> | <factor> * <term>
 <factor> ::= id | const | ( <expr> ) | input ( 
+```
 
 ### Code Samples
 Some samples of the CORE language:
