@@ -38,6 +38,8 @@ The context-free grammar for CORE, defined in BNF (Backus–Naur Form):
 <factor> ::= id | const | ( <expr> ) | input ( 
 ```
 
+All of these grammars have their own files, enabling the recursive descent parsing to come into play.
+
 ### Code Samples
 Some samples of the CORE language:
 
